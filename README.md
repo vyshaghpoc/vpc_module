@@ -37,13 +37,13 @@ module "aws_vpc" {
     "Environment" = "prod"
   }
 }
-```hcl
-## Requirements
+
+### Requirements
 
 - Terraform 0.14.x or newer
 - AWS provider 3.x or newer
 
-## Inputs
+### Inputs
 
 | Name                  | Description                                   | Type          | Default   | Required |
 |-----------------------|-----------------------------------------------|---------------|-----------|----------|
@@ -55,7 +55,7 @@ module "aws_vpc" {
 | `instance_tenancy`    | Tenancy of instances launched into the VPC    | `string`      | `default` | no       |
 | `tags`                | Tags to be applied to the VPC                 | `map(string)` | `{}`      | no       |
 
-## Outputs
+### Outputs
 
 | Name          | Description                              |
 |---------------|------------------------------------------|
