@@ -18,25 +18,7 @@ This Terraform module is designed to create an AWS VPC along with associated sub
 - **Subnet Creation**: Creates new subnets within the VPC.
 - **Route Table**: Sets up a route table and associates it with the subnets.
 
-## Usage
 
-### Basic Example
-
-Here is a basic example on how to use the module in your own Terraform script:
-
-```hcl
-module "aws_vpc" {
-  source = "./path/to/module"
-
-  cidr_block         = "10.0.0.0/16"
-  availability_zones = ["us-east-1a", "us-east-1b"]
-  env                = "prod"
-  subnet_bits        = 8
-  tags = {
-    "Name"        = "my-vpc"
-    "Environment" = "prod"
-  }
-}
 
 ## Requirements
 
@@ -62,3 +44,23 @@ module "aws_vpc" {
 | `vpc_id`      | The ID of the created VPC                |
 | `subnet_ids`  | List of IDs for the created subnets      |
 
+
+## Usage
+
+### Basic Example
+
+Here is a basic example on how to use the module in your own Terraform script:
+
+```hcl
+module "aws_vpc" {
+  source = "./path/to/module"
+
+  cidr_block         = "10.0.0.0/16"
+  availability_zones = ["us-east-1a", "us-east-1b"]
+  env                = "prod"
+  subnet_bits        = 8
+  tags = {
+    "Name"        = "my-vpc"
+    "Environment" = "prod"
+  }
+}
