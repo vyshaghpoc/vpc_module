@@ -37,7 +37,7 @@ module "aws_vpc" {
     "Environment" = "prod"
   }
 }
-
+```hcl
 ## Requirements
 
 - Terraform 0.14.x or newer
