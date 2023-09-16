@@ -38,7 +38,6 @@ module "aws_vpc" {
   }
 }
 
-
 ## Requirements
 
 - Terraform 0.14.x or newer
@@ -46,21 +45,20 @@ module "aws_vpc" {
 
 ## Inputs
 
-| Name                | Description                                     | Type          | Default | Required |
-|---------------------|-------------------------------------------------|---------------|---------|----------|
-| `cidr_block`        | The CIDR block for the VPC                      | `string`      | n/a     | yes      |
-| `availability_zones`| List of availability zones                      | `list(string)`| `[]`    | no       |
-| `env`               | Environment (prod, dev, test)                   | `string`      | n/a     | yes      |
-| `sub`               | The availability zones to use for subnets       | `list(string)`| `[]`    | no       |
-| `subnet_bits`       | Additional bits for subnet CIDR                 | `number`      | n/a     | yes      |
-| `instance_tenancy`  | Tenancy of instances launched into the VPC      | `string`      | `default` | no     |
-| `tags`              | Tags to be applied to the VPC                   | `map(string)` | `{}`    | no       |
+| Name                  | Description                                   | Type          | Default   | Required |
+|-----------------------|-----------------------------------------------|---------------|-----------|----------|
+| `cidr_block`          | The CIDR block for the VPC                    | `string`      | n/a       | yes      |
+| `availability_zones`  | List of availability zones                    | `list(string)`| `[]`      | no       |
+| `env`                 | Environment (prod, dev, test)                 | `string`      | n/a       | yes      |
+| `sub`                 | The availability zones to use for subnets     | `list(string)`| `[]`      | no       |
+| `subnet_bits`         | Additional bits for subnet CIDR               | `number`      | n/a       | yes      |
+| `instance_tenancy`    | Tenancy of instances launched into the VPC    | `string`      | `default` | no       |
+| `tags`                | Tags to be applied to the VPC                 | `map(string)` | `{}`      | no       |
 
 ## Outputs
 
-| Name        | Description                              |
-|-------------|------------------------------------------|
-| `vpc_id`    | The ID of the created VPC                |
-| `subnet_ids`| List of IDs for the created subnets      |
-
+| Name          | Description                              |
+|---------------|------------------------------------------|
+| `vpc_id`      | The ID of the created VPC                |
+| `subnet_ids`  | List of IDs for the created subnets      |
 
